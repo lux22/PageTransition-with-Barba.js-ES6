@@ -1,0 +1,17 @@
+@mixin breakPoint($point) {
+    @if $point == DESKTOP {
+      @media (min-width: 1450px) { @content; }
+    }
+    @else if $point == LAPTOP {
+      @media (min-width: 1279px) { @content; }
+    }
+    @else if $point == TABPRO {
+      @media (min-width: 1024px)  { @content; }
+    }
+    @else if $point == TAB {
+        @media (min-width: 768px)  { @content; }
+      }
+    @else if $point == MOBILE {
+        @media (min-width: 100px)  { @content; }
+      }  
+  }

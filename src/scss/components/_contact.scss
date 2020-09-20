@@ -1,0 +1,77 @@
+.flex-radio{
+    li{
+        display: flex;
+        max-width:500px;
+        width: 100%;
+        padding-right: 55px;
+        label{
+            flex: 0;
+        }
+        p{
+            font-size: 16px;
+            line-height: 3rem;
+        }
+        
+        @include breakPoint(LAPTOP){
+            &:hover{
+                .radio-container input ~ .checkmark{
+                    background-color: #7E29B2;
+                }
+    
+                .appoint-men{
+                    display: inline-flex !important;
+                }
+            }
+        }
+
+    }
+
+    @include breakPoint(MOBILE){
+           flex-direction: column !important;
+           padding: 0rem;
+           li{
+               padding-right: 0rem;
+           }
+    }
+    @include breakPoint(TAB){
+        flex-direction: row !important;
+        li{
+            display: flex;
+            max-width:500px;
+            width: 100%;
+            padding-right: 55px;
+        }
+    }
+}
+
+.radio-labels{
+    @include breakPoint(MOBILE){
+        min-height: 100px;
+    }
+    @include breakPoint(TAB){
+        min-height: 200px;
+    }
+    
+}
+
+.appoint-men{
+    display: none !important;
+    @include breakPoint(TABPRO){
+        >span:first-child{
+            font-size: 1.2rem;
+        }
+    }
+    @include breakPoint(LAPTOP){
+        >span:first-child{
+            font-size: 1.6rem;
+        }
+    }
+}
+.appoint-active{
+   display: inline-flex !important;
+ }
+
+.contact-img{
+    margin-top: -13rem;
+    @include aspect-ratio(540,887);
+}

@@ -1,0 +1,522 @@
+.banner-mobile-image{
+    display:none;
+}
+
+.banner-image-container{
+    @include aspect-ratio(1920,1949);
+    // height: 100vh;
+    @include breakPoint(MOBILE){
+        display: none;
+        height:auto;
+        &.banner-mobile-image{
+            display: block;
+            @include aspect-ratio(375,419);
+        }
+    }
+    @include breakPoint(TAB){
+        height: calc( 100vh - 512px);
+        display: block;
+        &.banner-mobile-image{
+            display: none;
+            @include aspect-ratio(1920,1950);
+        }
+    }
+    @include breakPoint(TABPRO){
+        height: calc(100vh - 683px);
+    }
+    @include breakPoint(LAPTOP){
+        height: 100vh;
+    }
+}
+
+
+.home-links-preview{
+    @include breakPoint(LAPTOP){
+        position: absolute !important;
+        left: -50px;
+        top: 12%;
+        width: 0px;
+        height: 400px !important;
+        z-index: 200;
+        background-size: cover;
+        background-position: center;
+        display: none;
+        @include aspect-ratio(800, 400);
+    }
+  
+}
+
+.header-row{
+    @include breakPoint(MOBILE)
+    {
+        &>div:first-child{
+            padding:0px;
+        }
+        &>div:last-child{
+            // position: absolute;
+            // top: 50%;
+            // display: flex;
+            // top: 0;
+            // bottom: 0;
+            // justify-content: center;
+            padding: 10rem 0rem 5rem;
+        }
+    }
+    @include breakPoint(TAB)
+    {
+        div[class*='col-']{
+            padding: 0px;
+        }
+        &>div:first-child{
+            padding:0px;
+        }
+        &>div:last-child{
+            position: relative;
+            top: auto;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+}
+
+.banner-content-overlay-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .content-wrapper{
+        h3{
+            span:last-child{
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                letter-spacing: 0.7rem;
+            
+            }
+
+            span{
+                font-size:2rem;
+                margin-right: 12px;
+                display: inline-block;
+            }
+        }
+    }
+    .company-logo{
+         margin-top: 30px;
+         margin: 0 auto;
+        @include breakPoint(MOBILE){
+            @include aspect-ratio(230,170);
+            max-width: 170px;
+            img{
+                object-fit: contain;
+            }
+        }
+        @include breakPoint(TAB){
+            @include aspect-ratio(230,170);
+            max-width: 170px;
+            img{
+                object-fit: contain;
+            }
+        }
+        @include breakPoint(TABPRO){
+            @include aspect-ratio(358,434);
+            max-width: 230px;
+            img{
+                object-fit: contain;
+            }
+        }
+    }       
+}
+
+
+@include breakPoint(MOBILE){
+    .sticky-container{
+        display: none;
+    }
+}
+
+
+@include breakPoint(LAPTOP){
+    .sticky-container{
+        display: block;
+        position: absolute;
+        right: 0;
+        // transform: translate(45%, 60%);
+        transform-origin: 0;
+        width: 50%;
+        bottom: -200px;
+        max-width: 350px;
+        width: 100%;
+        .sticky-image{
+            @include aspect-ratio(400,533);
+        }
+        
+        &.positionto-left{
+            left: 0;
+            right: auto;
+        }
+    
+        &.positionto-right-center{
+            right: 0;
+            left: auto;
+            top: 20%;
+        }
+    }
+    
+}
+
+
+.image-tile-block{
+    max-width: 750px;
+}
+
+.women-block-img{
+    @include aspect-ratio(1764,1104);
+}
+
+canvas{
+    position:absolute;
+    // border-radius:6px;
+    z-index:0;
+    bottom: 0;
+  }
+  
+
+.row-overlapp{
+    @include breakPoint(MOBILE){
+        margin-top: 0px;
+    }
+    @include breakPoint(TAB){
+        margin-top: -70px;
+    }
+   
+}
+
+.tiles-image-container{
+    display: flex;
+    @include breakPoint(MOBILE){
+        flex-direction: column;
+    }
+    @include breakPoint(TAB){
+        flex-direction: row;
+    }
+    .image-wrapper{
+        display: inline-flex;
+        width: 100%;
+        &:not(:last-child){
+            margin-right: 3rem;
+            @include breakPoint(MOBILE){
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            @include breakPoint(TAB){
+                flex: 0 0 56%;
+                max-width: 56%;
+            }
+            .image-tile-set{
+                @include breakPoint(MOBILE){
+                    height: 245px;
+                }
+                @include breakPoint(TAB){
+                    height: 245px;
+                }
+                @include breakPoint(TABPRO){
+                    height: 280px;
+                }
+                @include breakPoint(LAPTOP){
+                    height: 330px;
+                }
+                @include aspect-ratio(1118, 400);
+                // width: 40%;
+            }
+        }
+        &:last-child{
+            margin-right: 0rem;
+            .image-tile-set{
+                @include breakPoint(MOBILE){
+                    height: 245px;
+                }
+                @include breakPoint(TAB){
+                    height: 245px;
+                }
+                @include breakPoint(TABPRO){
+                    height: 280px;
+                }
+                @include breakPoint(LAPTOP){
+                    height: 330px;
+                }
+                @include aspect-ratio(518, 176);
+                // width: 40%;
+            }
+            
+        }
+    
+    }
+}
+
+.wrapper{
+    @include breakPoint(TAB){
+        margin:5rem 0rem;
+    }
+    @include breakPoint(TABPRO){
+        margin:5rem 0rem;
+    }
+    @include breakPoint(LAPTOP){
+        margin:5rem 0rem;
+    }
+    @include breakPoint(DESKTOP){
+        margin:12rem 0rem;
+    }
+}
+
+
+.backgroud-text{
+    position: relative;
+    @include breakPoint(MOBILE){
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding:4rem 0rem;
+    }
+    @include breakPoint(TAB){
+        max-width: max-content;
+        padding-bottom: 0rem;
+    }
+    .text-highlight{
+        font-size: 13vw;
+        text-transform: uppercase;
+        font-weight: 400;
+        opacity: 0.1;
+        color: #080808;
+        @include breakPoint(MOBILE){
+            font-size: 13vw;
+        }
+        @include breakPoint(TAB){
+            font-size: 13rem;
+        }
+        @include breakPoint(LAPTOP){
+            font-size: 17rem;
+        }
+
+        @include breakPoint(DESKTOP){
+            font-size: 20rem;
+        }
+        
+    }
+    >span{
+        font-size: 3.3rem;
+        position: absolute;
+        text-transform: uppercase;
+        font-family: $font-family-secondary;
+        font-weight: 600;
+        @include breakPoint(MOBILE){
+            font-size: 2.8rem;
+            top: 39%;
+            left: 0;
+            right: 0;
+        }
+         @include breakPoint(TAB){
+            font-size: 2.8rem;
+            top: 47%;
+            left: 15%;
+            right: auto;
+        }
+        @include breakPoint(TABPRO){
+            font-size: 3.6rem;
+            top: 45%;
+            left: 15%;
+            right: auto;
+        }
+        @include breakPoint(LAPTOP){
+            top: 50%;
+            left: 15%;
+            right: auto;
+        }
+    }
+    
+}
+
+
+.offers{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px;
+    span{
+        font-size: 18px;
+       
+    }
+    span:first-child{
+       color:#F45851 ;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+
+.service-imageaspect-ratio{
+    @include aspect-ratio(888 , 1114)
+}
+.packages-image-body{
+    @include aspect-ratio(436 , 367);
+}
+.packages-image-facial{
+    @include aspect-ratio(330 , 367);
+}
+.packages-image-skin{
+    @include aspect-ratio(330 , 499);
+}
+.packages-image-pedicure{
+    @include aspect-ratio(330 , 367);
+}
+.working-image{
+    @include aspect-ratio(1348 , 716);
+}
+.instapics{
+    @include aspect-ratio(394 , 268);
+}
+
+
+
+.company-working{
+  .list{
+      transition: all 0.3s ease-in-out;
+      @include breakPoint(MOBILE){
+        padding: 3rem 2rem;
+      }
+      @include breakPoint(TAB){
+        padding: 3rem 2rem;
+      }
+      @include breakPoint(TABPRO){
+        padding: 4rem 8rem;
+      }
+      &:hover{
+        background-color: #F2F2F2; 
+      }
+      display: flex;
+      justify-content: space-between;
+      span{
+          font-family: sans-serif;
+          font-size: 1.7rem;
+      }
+  }    
+}
+.companytime{
+    @include breakPoint(MOBILE){
+        padding:0rem 0rem 0rem 1rem;
+      }
+    @include breakPoint(TAB){
+        padding:0rem 0rem 0rem 1rem;
+      }
+      @include breakPoint(TABPRO){
+        padding:0rem 0rem 0rem 8rem;
+      }
+    .compay-captions{
+        display: flex;
+        justify-content: space-between;
+        background: #F8F8F8;
+        font-family: sans-serif;
+        @include breakPoint(MOBILE){
+            padding:3rem  2rem;
+            font-size: 1.7rem;
+          }
+        @include breakPoint(TAB){
+            padding:3rem  2rem;
+            font-size: 1.7rem;
+          }
+          @include breakPoint(TABPRO){
+            padding:3rem  2rem;
+            font-size: 2rem;
+          }
+          @include breakPoint(LAPTOP){
+            padding:3rem  2rem;
+
+          }
+    }
+}
+
+
+@media (min-width:100px) and (max-width:479px){
+    .women-block > div,.men-block > div,.packages-block > div,.working-block > div,.insta-block > div{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    // .image-wrapper{
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     &> div{
+    //         flex: 0 0 100% !important;
+    //         max-width: 100% !important;
+    //         margin-bottom: 20px;
+    //         height: calc( 100vh - 300px);
+    //     }
+    // }
+}
+
+  
+@include breakPoint(MOBILE){
+    .women-block,.men-block,.packages-block,.working-block,.insta-block{
+        max-width: 650px;   
+        margin: 0 auto;
+    }
+
+    .working-block
+    .packages-block > div{
+        align-items: baseline !important;
+    }
+    .women-block,.working-block{
+        flex-direction: column-reverse;
+    }
+    .men-block{
+        flex-direction: column;
+    }
+    .women-block > div:first-child{
+        padding-top:15px;
+    }
+    .insta-block{
+        &>div{
+            margin-bottom: 15px;
+        }
+    }
+    .men-block > div:last-child{
+        padding-top:20px
+    }
+    .fig-1{
+        margin-bottom: 0px;
+    }
+    .fig-2,.fig-4{
+        margin-bottom:0px;
+    }
+    .women-block > div,.men-block > div,.packages-block > div,.working-block > div,.insta-block > div{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+@include breakPoint(TAB){
+    .women-block,.men-block,.packages-block,.working-block,.insta-block{
+        max-width: 100%;   
+        margin-top: -70px;
+      }
+    .women-block,.men-block,.working-block{
+        flex-direction: row;
+    }
+    .packages-block > div{
+        align-items: flex-end !important;
+    }
+    .women-block > div:first-child{
+        padding-top:0px;
+    }
+    .men-block > div:last-child{
+        padding-top:0px
+    }
+    .fig-1{
+        margin-bottom: -50px;
+    }
+    .fig-2,.fig-4{
+        margin-bottom: 40px;
+    }
+    .women-block > div,.men-block > div,.packages-block > div,.working-block > div,.insta-block > div{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+  

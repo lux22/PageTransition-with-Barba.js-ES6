@@ -1,0 +1,21 @@
+.price-header-row{
+    div[class*='col-']{
+        padding:0px 18px;
+    }
+
+    .priceheader{
+        h4{
+            text-transform: uppercase;
+        }
+       >span{
+           font-family: sans-serif;
+           font-size: 18px;
+           color: #A7589A;
+       }
+        
+    }
+
+    .card-text{
+        margin:5px 0px 18px;
+    }
+}

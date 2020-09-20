@@ -1,0 +1,246 @@
+.about-imgwrapper{
+    @include aspect-ratio(1000,339);
+}
+
+.para-head{
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 6rem 0rem 4rem;
+    line-height: 30px;
+}
+
+.heading-small{
+    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 34px;
+    padding-left: 12px;
+    border-left: 6px solid purple;
+    text-transform: uppercase;
+}
+
+.img-list{
+    @include aspect-ratio(444,557);
+   
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    img{
+        transform-origin: 50% 50%;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover{
+        >img{
+            transform-origin: 50% 50%;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+    }
+}
+
+.about-img-wrapper{
+   
+    @include aspect-ratio(414,378);
+    >img{
+        object-fit: contain;
+    object-position: bottom;
+    }
+
+    @include breakPoint(MOBILE){
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    @include breakPoint(TAB){
+        max-width: 400px;
+        margin-bottom: 0px;
+    }
+}
+
+    .imagelist-wrapper{
+        // margin: 0px -15px;
+        padding: 10rem 0rem 10rem;
+    }
+
+.about-story{
+    p{
+        font-size: 18px;
+        line-height: 30px;
+        font-family: sans-serif;
+    }
+}
+
+.about-owners-containers{
+    @include breakPoint(MOBILE){
+        padding: 1.5rem
+    }
+    @include breakPoint(TABPRO){
+        padding: 6rem 0rem 8rem;
+    }
+    
+}
+
+.about-owners{
+  
+    position: relative;
+    @include breakPoint(TAB){
+        background: #F2F2F2;
+    }
+}
+
+// .about-owners::before{
+//    content:'';
+//    position: absolute;
+//    width: 30%;
+//    height: 400px;
+//    background-color: purple;
+// }
+
+.about-us-owners {
+    @include breakPoint(MOBILE){
+        text-align: center;
+    }
+   @include breakPoint(TAB){
+    padding: 0rem 4rem 0rem 0rem;
+    text-align: left;
+   }
+}
+
+.about-us-owners h3{
+    margin-bottom: 2rem;
+    font-size: 18px;
+}
+
+.about-us-owners span{
+    margin-bottom: 4rem;
+    display: block;
+    font-size: 16px;
+}
+
+.about-us-owners p{
+    font-size: 17px;
+    font-family: sans-serif;
+    line-height: 30px;
+}
+
+.owners-content{
+    position: relative;
+}
+
+@include breakPoint(LAPTOP){
+    .owners-content::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        right: 15px;
+        box-shadow: 22px -24px #FFEDFC;
+        z-index: -1;
+        top: 0;
+        
+    }
+}
+
+
+.achiv-items{
+    background-color: #A7589A;
+    padding: 0rem 2rem 2rem 2rem;
+    min-height: 170px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+
+    @include breakPoint(MOBILE){
+        min-height: 120px;
+    }
+
+    @include breakPoint(TABPRO ){
+        min-height: 170px;
+    }
+    
+    
+}
+
+.achiv-items::before{
+    content: attr(data-value);
+    position: absolute;
+    left: 12px;
+    font-size: 7rem;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    top:0px;
+    // @include breakPoint(MOBILE){
+    //     top: -20px;
+    // }
+
+    // @include breakPoint(TABPRO){
+    //     top: -43px;
+    // }
+}
+
+.achiv-items > span{
+    font-size: 14px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.owners-storys{
+    margin-top: 5rem !important;
+}
+
+.beauty-academy-container{
+    padding-right: 5rem;
+}
+
+.about-management-imgwrapper{
+    flex: 1;
+    @include aspect-ratio(260,260)
+    
+}
+
+.fig-manag-size{
+    font-size:14px;
+    margin-top: 18px;
+}
+
+.about-management-img{
+    display: flex;
+    margin: 0px -30px;
+    >figure{
+        padding: 0rem 3rem;
+        flex:1;
+    }
+}
+
+.beauty-acadeymy-wrapper
+{
+  
+    .beauty-academy-image{
+        margin-bottom: 4rem;
+        @include aspect-ratio(900,290);
+        max-width:800px;
+        
+    }
+
+    >p{
+        line-height: 30px;
+        font-family: sans-serif;
+    }
+}
+
+.about-content{
+   
+    max-width: 1100px;
+    width: 100%;
+    @include breakPoint(MOBILE){
+        padding-left: 0px;
+        margin-top: 0px;
+    }
+    @include breakPoint(LAPTOP){
+        padding-left: 60px;
+        margin-top: -100px;
+    }
+   
+    
+}

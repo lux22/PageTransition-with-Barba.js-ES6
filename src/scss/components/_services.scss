@@ -1,0 +1,86 @@
+.header-top{
+    flex:1;
+    text-align: center;
+    .header-heading{
+        font-size: 4rem;
+        text-transform: uppercase;
+        @include breakPoint(MOBILE){
+            padding: 4rem 0px 4rem;
+            font-size: 4rem;
+        }
+        @include breakPoint(TAB){
+            padding: 4rem 0px 4rem;
+            font-size: 5.7rem;
+        }
+        @include breakPoint(TABPRO){
+            padding: 4rem 0px 4rem;
+        }
+        @include breakPoint(LAPTOP){
+            padding: 8rem 0px 6rem;
+        }
+      }
+}
+
+.pagedetail-image{
+    @include aspect-ratio(1364,409);
+}
+
+.style-image-container{
+    @include aspect-ratio(806,315);
+}
+
+.style-container{
+    padding: 5rem 0rem 12rem;
+}
+
+.page-content{
+    text-align: center;
+    // line-height: 3rem;
+    @include breakPoint(MOBILE){
+        padding: 5rem 2rem 3rem 2rem;
+    }
+    @include breakPoint(TAB){
+        padding: 5rem 4rem 3rem 4rem;
+    }
+    @include breakPoint(TABPRO){
+        padding: 8rem 4rem 3rem 4rem;
+    }
+    @include breakPoint(LAPTOP){
+        padding: 8rem 10rem 8rem 10rem;
+    }
+    @include breakPoint(DESKTOP){
+        padding: 8rem 10rem 8rem 10rem;
+    }
+}
+.page-content p{
+    font-family:sans-serif;
+    color: #575656;
+    @include breakPoint(MOBILE){
+        font-size: 14px;
+        line-height: 5rem;
+    }
+    @include breakPoint(TAB){
+        font-size: 16px;
+        line-height: 5rem;
+    }
+    @include breakPoint(LAPTOP){
+        font-size: 18px;
+        line-height: 4rem;
+    }
+}
+
+@include breakPoint(MOBILE){
+    .row-mobile-reverse{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@include breakPoint(TAB){
+    .row-mobile-reverse{
+        flex-direction: row;
+        text-align: left;
+    }
+}
